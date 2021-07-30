@@ -11,19 +11,24 @@
 header{
     width: 100%;
     height: 100px;
-    background: cadetblue;
+    background-color: rebeccapurple;
 }
 
 header nav a{
     display: inline;
     margin-left: 5px;
 }
-header h2{
+header h1{
     display:inline-block;
-    color: black
+    color: white
 }
 footer{
+    text-align: center;
     width: 100%;
     height: 100px;
-    background: rebeccapurple;
+}
+img{
+    border: 1px solid white;
+
+    width: auto;
 }
