@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+<body>
+    <header>
+        <div class ="Website Name">
+            <h1>Simply Blogging</h1>
+        </div>
+        
+            <!-- Navbar content -->
+      <!-- Dropdown Structure -->
+
+        
+
+     </header>
+     <div class="topnav">
+        
+        <a href="#Home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#search">Search</a>
+        <a href="#about">About</a>
+        </div>
+      </div>
+    
+        <div class="container">
+            
+            <form action="">
+                <input type="text" id="blog-title" placeholder="Blog title">
+                <textarea id="blog-text" placeholder="Blog Details"></textarea>
+                
+                <textarea id="blog-pic" placeholder="Blog Picture!!! If required..."></textarea>
+                <button id="add-btn">Add Your Blog</button>
+            </form>
+        </div>
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div id = "blogs"> 
+                <div class="col-md-2 col-md-2 col-md-8">
+                    <div class="blog">
+                        <p class="blog-counter">Blog ${index + 1}</p>
+                        <img src="img_mountains.jpg" alt=""/>
+                        <h3 class="blog-title"> ${element.title} </h3>
+                        <p class="blog-text"> ${element.text}</p>
+                        <button class="note-btn">Delete Note</button>
+                        
+                    </div>
+                </div>
+            </div>
+               
+        
+            </div>
+        </div>
+
+        <!-- <div class="container">
+            <hr>
+            <h2>Blog List </h2>
+            <hr>
+            <div id="blogs">
+        
+                    <div class="blog">
+                        <p class="blog-counter">Note ${index + 1}</p>
+                        <h3 class="blog-title"> $element.title </h3>
+                        <p class="blog-text"> $element.text</p>
+                        <p class="blog-pic"> ${element.picture}</p>
+                        <button class="note-btn">Delete Note</button>
+                        
+                    </div>
+                
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+    </section> 
+
+
+
+
+    
+
+    <script src="blog.js"></script>
+</body>
+</html>
