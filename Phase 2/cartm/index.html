@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        
+        <h3 style="background-color: aqua;">
+            Number of Items in cart: 
+            
+        </h3>
+        <h2 id ="numberOfItems">0</h2>
+    
+        <span id="numberOfItems"></span><br/>
+    <span href="" onclick="openShoppingCart()" class="material-icons">shopping_cart</span>
+   
+    </nav>
+    <main>
+        
+        <div class="item">
+            <img src="./images/iphone-12.jpg" alt="">
+            <div class="item-text">
+                <h2>IPhone 12 Pro</h2>
+                <p>Description / Price</p>
+                <span onclick="addToCart('iphone')"><span class="material-icons">add</span> Add to cart</span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/ipad.png" alt="">
+            <div class="item-text">
+                <h2>IPad Pro</h2>
+                <p>Description / Price</p>
+                <span onclick="addToCart('ipad')"><span class="material-icons">add</span> Add to cart</span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/imacs.jpg" alt="">
+            <div class="item-text">
+                <h2>24" IMac</h2>
+                <p>Description / Price</p>
+                <span onclick="addToCart('imac')"><span class="material-icons">add</span> Add to cart</span>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/apple-watch.jpg" alt="">
+            <div class="item-text">
+                <h2>Apple Watch 6</h2>
+                <p>Description / $300</p>
+                <span onclick="addToCart('watch')"><span class="material-icons">add</span> Add to cart</span>
+            </div>
+        </div>
+    </main>
+
+    <div id="shoppingCart">
+        <h2 style="background-color: aquamarine;">SHOPPING CART CHECKOUT</h2>
+        <span onclick="closeShoppingCart()" id="cancel" class="material-icons">cancel</span>
+        <div class="cart-items">
+            <div id="iphone-cart" class="cart-item">
+                <img src="./images/iphone-12.jpg" alt="">
+                <div class="item-text">
+                    <h3>IPhone Pro</h3>
+                    <p>Price is: $1,000</p>
+                    <p id="iphone-nums">Number of Items</p>
+                </div>
+            </div>
+            <div id="ipad-cart" class="cart-item">
+                <img src="./images/ipad.png" alt="">
+                <div class="item-text">
+                    <h3>IPad Pro</h3>
+                    <p>Price</p>
+                    <p id="ipad-nums">Number of Items</p>
+                </div>
+            </div>
+            <div id="imac-cart" class="cart-item">
+                <img src="./images/imacs.jpg" alt="">
+                <div class="item-text">
+                    <h3>24" IMac</h3>
+                    <p>Price</p>
+                    <p id="imac-nums">Number of Items</p>
+                </div>
+            </div>
+            <div id="watch-cart" class="cart-item">
+                <img src="./images/apple-watch.jpg" alt="">
+                <div class="item-text">
+                    <h3>Apple Watch 6</h3>
+                    <p>$300</p>
+                    <p id="watch-nums">Number of Items</p>
+                    
+                </div>
+            </div>
+        </div>
+        <h3 id="totalAmount">Amount total: $0</h3>
+    </div>
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
