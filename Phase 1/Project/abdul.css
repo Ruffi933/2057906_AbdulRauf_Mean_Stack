@@ -1,0 +1,34 @@
+.contaier{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rebeccapurple;
+}
+
+header nav a{
+    display: inline;
+    margin-left: 5px;
+}
+header h1{
+    display:inline-block;
+    color: white
+}
+footer{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+img{
+    border: 1px solid white;
+
+    width: auto;
+}

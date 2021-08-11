@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Manager</title>
+    <link rel="stylesheet" type="text/css" href="budget.css">
+</head>
+<body>
+    <div class="container p-home">
+        <h1 class="heading">Program Managers</h1>
+        <div class="form-box">
+            <form id = "program-form">
+                <fieldset>
+                    <legend>Please Add New Budget</legend>
+                    <div id ="message"></div>
+                    <label for="cname">Client Name:</label>
+                    <input type = "text" id = "cname">
+                    <label for="pname">Project Name:</label>
+                    <input type = "text" id = "pname">
+                    <label for="budget">Budget:</label>
+                    <input type = "number" id = "budget" name = "budget">
+                    <input type = "button" class="back-button" onclick="location.href='index.html'" value="Back">
+                    <div class="btn-box">
+                        <input type="button" id="btn-add" value ="Add" onclick="addData()">
+                        <input type="button" id="btn-clear" value="Clear" onclick="clearForm()">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="budget.js"></script>
+</body>
+</html>
