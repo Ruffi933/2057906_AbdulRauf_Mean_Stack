@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class = "header">
+    <h1>Welcome to My First Angular Website</h1>
+    <nav>
+        <a>Home |</a>
+        <a>Services |</a>
+        <a>Contact Us |</a>
+        <a>About Us</a>
+    </nav>
+</div>
+
+<div>
+    <h2>Login Page </h2>
+<form style="text-align: center;" #loginRef="ngForm" 
+(ngSubmit)="checkUser(loginRef)">
+<label style="padding-left: 2rem;"><h5 >UserName:</h5></label>
+<input  type="text" #nameRef name="user" ngModel required minlength="2"/><br/>
+<label style="padding-left: 2rem;"><h5>Password:</h5></label>
+<input type="password"  name="pass" ngModel required/><br/>
+<input type="submit" style="margin-left: 8em;" value="Submit" (click)="passValue(nameRef)" [disabled]="!loginRef.valid"/>
+<!-- <input type="reset" value="reset"/> -->
+<!-- <input type="button" [value]="b1" (click)="passValue(nameRef)"  /><br/> -->
+<input type="button" style="margin-left: 1em;display: inline-block;" [value]="b2" (click)="toggle1()"/>
+<div *ngIf="flag">
+    <hr/>
+    <hr/>
+    <div>
+        {{msg}}
+        <h5 style="text-decoration: underline;">My Portfolio</h5>
+        <h4 style="font-family: fantasy; text-align: left;">Welcome : {{pname}}</h4>
+        Contact Name : <input type="text" #nameRef1/>
+        Phone Number : <input type="number" #idRef/>
+        <input type="button" value="Save" (click)="passValue1(nameRef1,idRef)"/>
+        <!-- Name is {{firstName}}
+        Phone number is {{id}}
+        {{stdNames}} -->
+            
+        <table border="1">
+            <tr>
+                <th>Full Name</th>
+                <th>Contact Number</th>
+            </tr>
+            <tr>
+                <td>{{firstName}}</td> 
+                <td>{{id}}</td>
+            </tr>
+    </table>
+    </div>
+  </div>
+<hr/>
+<hr/>
+<div *ngIf="flag1">
+    {{msg}}
+    <h4>Registration Form</h4>
+    <table style="background-color: grey;" class="center" border="2">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="fname" id="fname"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="lname" id="lname"></td>
+            </tr>
+            <tr>
+                <th>UserName</th>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="text" name="age" id="age"></td>
+            </tr>
+            <tr id="btna">
+                
+                <input type="submit" style="margin-left: 8em;" value="Submit" (click)="toggle()"/>
+                <input type="submit" style="margin-left: 8em;" value="Login" (click)="toggle()"/> 
+
+
+            </tr>
+        </tbody>
+    </table> 
+</div>
+</form>
+<br/>
+
+</div>
