@@ -1,0 +1,48 @@
+<div>
+    <h2 style="text-align: center;">Task Tracker</h2>
+    <form style="text-align: center;" #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+        <mat-form-field>
+           <mat-label>Enter your ID</mat-label>
+            <input matInput name ="user" type="text" #idRef ngModel/>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+           <mat-label>Enter your Name</mat-label>
+            <input matInput name ="pass" #nameRef ngModel/>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Task Name</mat-label>
+            <input matInput name ="pass" #taskRef ngModel/>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Dead Line for Task</mat-label>
+            <input matInput name ="pass" #dlRef ngModel/>
+        </mat-form-field>
+        <br/>
+</form>
+
+</div>
+<div class="buttons">
+<button  type ="button" mat-raised-button style="background-color:slategray;" value="Save" (click)="passValue(idRef,nameRef,taskRef,dlRef)">Save</button>
+<button  type ="reset" mat-raised-button style="background-color:slategray;" >Reset</button>
+</div>
+<hr/>
+
+<table style="align-items: center;" mat-table class="mat-elevation-z9 data-table">
+    <tr>
+        <th>ID</th>
+        <th>Employee Name</th>
+        <th>Task Name</th>
+        <th>DeadLine</th>
+    </tr>
+    <tr *ngFor="let emp of emps">
+        <td>{{emp.id}}</td> 
+        <td>{{emp.name}}</td>
+        <td>{{emp.taskName}}</td>
+        <td>{{emp.deadline}}</td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,35 @@
+.data-table{
+    width: 70%;
+    margin: 20px auto;
+}
+h2{
+    background-color:black;
+    color: red;
+    height: 50px;
+    align-items: center;
+    padding-top: 20px;
+}
+form{    
+    width: 50%;
+}
+.buttons{
+justify-content: center;
+padding-left: 10%;
+margin-left: 10px;
+}
+button{
+    margin-right: 20px;
+}
+table{
+    /* background-color:honeydew; */
+    font-family: 'Rock Salt', cursive;
+}
+tr{
+    text-align: center;
+}
+td:nth-child(1){
+background-color: lavender;
+}
+td:nth-child(4){
+    background-color: red;
+    }
