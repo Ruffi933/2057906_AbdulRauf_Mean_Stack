@@ -1,0 +1,28 @@
+<div class="quize">
+    <div class="question-bar">
+      <form name="form" [formGroup]="form" (ngSubmit)="onSubmitAnswers()">
+  
+        <div formArrayName="answers">
+  
+       
+      <div *ngFor="let q of questions; let i = index" class="mb-5"  >
+         <h2 class="qestion">{{i + 1}}) {{q.title}}</h2>
+      <ul>
+        <li *ngFor="let o of q.options; let j = index">
+          <input type="radio" [formControl]="anserForm(i)" [value]="j" name="{{i}}" [id]="j + (i*10)" class="ansList">
+          <label [for]="j + (i*10)" class="ansa">{{o}}  </label>
+        </li>
+      </ul>
+      <span 
+      class="text-danger" 
+      *ngIf="isSubmit && anserForm(i).errors && anserForm(i).hasError('required')">Required</span>
+      <hr>
+      </div>
+      
+    </div>
+      <div class="footer-button">
+        <button id="submit" type="submit" class="submitBtn">{{step === 0 ? 'Submit & Review': 'Submit'}}</button>
+      </div>
+    </form>
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+<div class="quize">
+    <div class="question-bar">
+      <form name="form" [formGroup]="form" (ngSubmit)="onSubmitAnswers()">
+  
+        <div formArrayName="answers">
+  
+       
+      <div *ngFor="let q of questions; let i = index" class="mb-5" [ngClass]="{'wrong': answers[i] !== questions[i].answer,'correct': answers[i] === questions[i].answer}" >
+         <h2 class="qestion">{{i + 1}}) {{q.title}}</h2>
+        <ul>
+          <li *ngFor="let o of q.options; let j = index">
+            <input type="radio" [formControl]="anserForm(i)"  [value]="j" name="{{i}}" [id]="j + (i*10)" class="ansList">
+            <label [for]="j + (i*10)" class="ansa">{{o}}  </label>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+      <div class="footer-button">
+          <h3 [ngClass]="{'text-success': correctAnswers >= questions.length/2,'text-danger': correctAnswers < questions.length/2}"> Result {{correctAnswers }} / {{ questions.length}} : {{correctAnswers >= questions.length/2 ? 'Pass': 'Fail'}}</h3>
+        <a href="javascript:void(0)" [routerLink]="['/']" routerLinkActive="router-link-active"   class="submitBtn"> Play Again </a>
+      </div>
+    </form>
+    </div>
+  </div>
