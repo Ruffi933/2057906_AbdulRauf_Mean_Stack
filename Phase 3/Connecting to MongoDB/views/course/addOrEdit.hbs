@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/course" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{course._id}}">
+    <div class="form-group">
+        <label>Course Id</label>
+        <input type="text" class="form-control" name="courseid" placeholder="Course Id" value="{{course.courseid}}" required>
+       
+    </div>
+    
+    <div class="form-group">
+        <label>Course Name</label>
+        <input type="text"  class="form-control" name="coursename" placeholder="Course Name" value="{{course.coursename}}" required>
+       
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" class="form-control" name="description" placeholder="Add Description" required>{{course.description}}</textarea>
+       
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Amount</label>
+            <input type="number" class="form-control" name="amount" placeholder="Enter Amount" value="{{course.amount}}" required>
+        </div>
+       
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Add Course</button><br/><hr/>
+        <a class="btn btn-secondary" href="/course/list"><i class="fa fa-list-alt"></i> View All Course</a>
+        <a class="btn btn-secondary" href="/course/list"><i class="fa fa-list-alt"></i> Delete a course</a>
+        <a class="btn btn-secondary" href="/course/list"><i class="fa fa-list-alt"></i> Update a course</a><br/>
+    </div>
+</form>

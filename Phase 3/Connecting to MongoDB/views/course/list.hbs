@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/course"><i class="fa fa-plus"></i> Back</a> Course List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.courseid}}</td>
+            <td>{{this.coursename}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.amount}}</td>
+            <td>
+                <a href="/course/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/course/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
