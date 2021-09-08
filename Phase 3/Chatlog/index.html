@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+     <script src="/socket.io/socket.io.js"></script>
+    <script type="text/Javascript">
+        var socket=io();
+        function appendMessage(){
+            let msg = document.getElementById("client_message").value;
+            let name = document.getElementById("client_name").value;
+            document.getElementById("message-container").innerHTML+="You : "+msg+"<br/>";
+            let completeMessage = [name,msg];
+            socket.emit("Client_Message",completeMessage);
+            document.getElementById("client_message").value="";
+        };
+
+        socket.on("ServerResponse",(server)=> {
+            document.getElementById("message-container").innerHTML+= "Server Says: "+server+"<br/>";
+        });
+
+        
+    </script>
+    <style>
+    
+
+        #message-container div {
+          background-color: lime;
+          padding: 5px;
+        }
+    
+        #message-container div:nth-child(2n) {
+          background-color: red;
+        }
+    
+      
+    
+        
+      </style>
+</head>
+<body>
+    <h2 style="font-family: 'Courier New', Courier, monospace; text-align: center; background-color: blueviolet; padding: 3rem;">Chat Log</h2>
+    <h4 style="color: red; text-decoration: underline;">Important Note : Your conversation is being stored in the database</h4><hr/>Messages<br/><br/><br/>
+        <div id="message-container"></div><hr/><hr/>
+            
+        
+        <label><h3>Your Name :</h3> </label><input type="text" id="client_name"/>
+        <label><h3>Your Message :</h3></label>
+        <textarea  id="client_message" style="width: 50%; height: 60%;"></textarea>
+        <input type="button" value="Send" onclick="appendMessage()"/>
+        
+    </div>
+    
+        
+    
+</body>
+</html>
